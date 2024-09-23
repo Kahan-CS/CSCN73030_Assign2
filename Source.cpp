@@ -6,15 +6,17 @@
 
 using namespace std;
 
+// Struct to store student data for first name, last name, and email
 struct STUDENT_DATA
 {
-	string fname;
-	string lname;
-	string email;
+	string fname;	// First name
+	string lname;	// Last name
+	string email;	// Student Email
 };
 
 int main() {
 
+	// If pre-release directive defined, enable email reading
 #ifdef PRE_RELEASE
 	cout << "Running pre-release version\n";
 	ifstream fin("StudentData_Emails.txt");
@@ -45,6 +47,7 @@ int main() {
 
 		fin.close();
 
+		// Steps to Debug using cout to check for first name, last name (for pre-release enabled email as well)
 		for (const auto& student : students) {
 			cout << "First Name: " << student.fname
 				<< ", Last Name: " << student.lname;
@@ -55,7 +58,7 @@ int main() {
 		}
 	}
 	else {
-		cout << "Error opening file";
+		cout << "Error opening file";	// error message if file can't be found/opened
 	}
 
 	return 0;
