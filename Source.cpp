@@ -25,9 +25,10 @@ int main() {
 
 		fin.close();
 
-		/*for (const auto& student : students) {
+		// Debugging step
+		for (const auto& student : students) {
 			cout << "First Name: " << student.fname << ", Last Name: " << student.lname << endl;
-		}*/
+		}
 	}
 	else {
 		cout << "Error opening file";
